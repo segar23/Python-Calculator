@@ -14,6 +14,7 @@ def perform_math():
     if equation == "quit":
         run = False
     else:
+        equation = re.sub('[a-zA-Z,.:()" "]', '', equation)
         init = eval(equation)
         print("You typed", init)
 
